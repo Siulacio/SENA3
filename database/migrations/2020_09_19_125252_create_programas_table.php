@@ -21,6 +21,8 @@ class CreateProgramasTable extends Migration
             $table->date('fecha_cierre')->comment('Fecha de cierre del Programa');
             $table->boolean('tipo')->comment('0:Técnico, 1:Tecnólogo'); 
             $table->integer('duracion')->comment('Duración del Programa en horas');
+            $table->boolean('estado')->default(1)->comment('0:Inactivo, 1:Acivo'); 
+
             $table->timestamps();
 
             $table->engine='InnoDB';

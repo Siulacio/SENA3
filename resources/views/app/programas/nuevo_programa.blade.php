@@ -31,7 +31,7 @@
                         <div class="form-group row mr-3 align-center">
                         <hr>
                             <button type="submit" class="btn btn-primary">Guardar</button>
-                            <a href="{{ asset('/usuarios/listado') }}" class="ml-1 btn btn-secondary">Regresar</a>
+                            <a href="{{ asset('/programas/listado') }}" class="ml-1 btn btn-secondary">Regresar</a>
                         </div>
                     </form>
                     {{-- propio de la vista --}}

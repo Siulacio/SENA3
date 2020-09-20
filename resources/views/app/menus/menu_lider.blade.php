@@ -14,7 +14,7 @@
         <li class="has_sub">
             <a href="javascript:void(0);" class="waves-effect waves-light"><i class="mdi mdi-email"></i><span> Programas </span><span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
             <ul class="list-unstyled">
-                <li><a href="#"> Programas</a></li>
+                <li><a href="{{url('/programas/listado')}}"> Programas</a></li>
             </ul>
         </li>
         <li class="has_sub">
