@@ -19,9 +19,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/listado', function () {
-    return view('app.programas.listado_programa');
-});
 
 Auth::routes();
 
@@ -48,6 +45,12 @@ Route::group(['middleware' => ['adminUser']], function(){
 
 
 //rutas programas
+    Route::get('/programas/listado','ProgramasController@index')->middleware('auth');
+    Route::get('/programas/nuevo','ProgramasController@create')->middleware('auth');
+    Route::post('/programas/guardar','ProgramasController@store')->middleware('auth');
+    Route::get('/programas/estado/{id}','ProgramasController@estados')->middleware('auth');
+    Route::get('/programas/editar/{id}','ProgramasController@edit')->middleware('auth');
+    Route::post('/programas/actualizar','ProgramasController@update')->middleware('auth');    
 
 // Route::get('/usuarios/nuevo', function () {
 //     return view('app.usuarios.nuevo_usuario');

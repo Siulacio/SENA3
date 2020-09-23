@@ -14,6 +14,7 @@ class Programas extends Model
         'fecha_inicio',
         'fecha_cierre',
         'tipo',
-        'duracion'
+        'duracion',
+        'estado'
     ];
 }
