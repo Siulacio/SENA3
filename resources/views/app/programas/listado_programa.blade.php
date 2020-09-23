@@ -1,6 +1,6 @@
 @extends('app.dashboard')
 @section('headers')
-!-- DataTables -->
+{{-- !-- DataTables --> --}}
         <link href="{{asset('dashor/assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('dashor/assets/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 @endsection
@@ -26,18 +26,49 @@
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                             <tr>
-                                <td>codigo</td>
+                                <td>Codigo</td>
                                 <td>Nombre</td>
-                                <td>inicio</td>
-                                <td>cierre</td>
-                                <td>tipo</td>
-                                <td>duracion</td>
-                                <td>acciones</td>
+                                <td>Inicio</td>
+                                <td>Cierre</td>
+                                <td>Tipo</td>
+                                <td>Duracion (Hrs)</td>
+                                <td>Estado</td>
+                                <td>Acciones</td>
                             </tr>
                         </thead>
                         <tbody>
-                           
-                            <tr>
+                           @foreach ($programas as $programa)
+                                <tr>
+                                    <td>{{$programa->codigo}}</td>
+                                    <td>{{$programa->nombre}}</td>
+                                    <td>{{$programa->fecha_inicio}}</td>
+                                    <td>{{$programa->fecha_cierre}}</td>
+                                    <td>
+                                        @if ($programa->tipo == 0)
+                                            Técnico
+                                        @else
+                                            Tecnólogo
+                                        @endif
+                                    </td>
+                                    <td>{{$programa->duracion}}</td>
+                                    <td>
+                                        @if ($programa->estado == 1)
+                                            Activo
+                                        @else
+                                            Inactivo
+                                        @endif
+                                    </td>
+                                    <td>                                        
+                                        <a href="{{url('/programas/editar/'.$programa->id)}}" ><i class="fas fa-edit" title="Editar Programa"></i></a>
+                                        @if ($programa->estado == 1)
+                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-thumbs-up" title="Inactivar Programa"></i></a>
+                                        @else
+                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-thumbs-down" title="Activar Programa"></i></a>                                            
+                                        @endif                                        
+                                    </td>
+                                </tr>   
+                           @endforeach
+                            {{-- <tr>
                                 <td>codigo</td>
                                 <td>Nombre</td>
                                 <td>inicio</td>
@@ -45,7 +76,7 @@
                                 <td>tipo</td>
                                 <td>duracion</td>
                                 <td>acciones</td>
-                             </tr>
+                             </tr> --}}
                         </tbody>
                     </table>
                     {{-- propio de la vista --}}

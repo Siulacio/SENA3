@@ -26,16 +26,26 @@
 <div class="form-group row">
     <label for="example-text-input" class="col-sm-2 col-form-label">Tipo Programa</label>
     <div class="col-sm-10">
-        <select name="rol" id="rol" class="form-control">
-            <option value="0">Técnico</option>
-            <option value="1">Tecnólogo</option>
+        <select name="tipo" id="tipo" class="form-control">
+            @if (isset($programa->tipo))
+                @if ($programa->tipo == 0)
+                    <option value="0" selected>Técnico</option>
+                    <option value="1">Tecnólogo</option>                
+                @else
+                    <option value="0">Técnico</option>
+                    <option value="1" selected>Tecnólogo</option> 
+                @endif
+            @else
+                <option value="0">Técnico</option>
+                <option value="1">Tecnólogo</option>
+            @endif
         </select>
     </div>
 </div>
 <input type="hidden" name="id" value="{{$programa->id ?? ''}}">
 
 <div class="form-group row">
-    <label for="example-text-input" class="col-sm-2 col-form-label">Duración</label>
+    <label for="example-text-input" class="col-sm-2 col-form-label">Duración (Hrs)</label>
     <div class="col-sm-10">
         <input class="form-control" name="duracion" type="text" value="{{old('duracion', $programa->duracion ?? '')}}" id="example-text-input" required>
     </div>

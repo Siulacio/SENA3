@@ -20,6 +20,7 @@ class programasSeeder extends Seeder
             'fecha_inicio' => '2019/08/01',
             'fecha_cierre' => '2028/08/01',
             'duracion' => 2208, 
+            'estado' => 1, 
         ]);
     }
 }
