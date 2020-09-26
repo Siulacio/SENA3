@@ -50,7 +50,15 @@ Route::group(['middleware' => ['adminUser']], function(){
     Route::post('/programas/guardar','ProgramasController@store')->middleware('auth');
     Route::get('/programas/estado/{id}','ProgramasController@estados')->middleware('auth');
     Route::get('/programas/editar/{id}','ProgramasController@edit')->middleware('auth');
-    Route::post('/programas/actualizar','ProgramasController@update')->middleware('auth');    
+    Route::post('/programas/actualizar','ProgramasController@update')->middleware('auth');  
+    
+    //rutas aprendices
+    Route::get('/aprendices/listado','AprendizController@index');
+    Route::get('/aprendices/nuevo','AprendizController@create');
+    Route::post('/aprendices/guardar','AprendizController@store');
+    Route::get('/aprendices/estado/{id}','AprendizController@estados');
+    Route::get('/aprendices/editar/{id}','AprendizController@edit');
+    Route::post('/aprendices/actualizar','AprendizController@update');  
 
 // Route::get('/usuarios/nuevo', function () {
 //     return view('app.usuarios.nuevo_usuario');
