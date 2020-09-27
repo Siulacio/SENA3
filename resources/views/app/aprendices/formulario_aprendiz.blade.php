@@ -75,9 +75,10 @@
     </div>
 </div>
 <div class="form-group row">
-    <label for="example-text-input" class="col-sm-2 col-form-label">Tipo de Sangre</label>
+    <label for="example-text-input" class="col-sm-2 col-form-label">Tipo de Sangre <span style="color: orange">*</span></label>
     <div class="col-sm-10">
         <select name="tipo_sangre" id="tipo_sangre" class="form-control">
+            <option value="" disabled selected>Seleccione tipo sangre....</option>
             @foreach ($tiposSangre as $sangre)
                 @if ( isset($aprendiz->tipo_sangre) )
                     @if ($sangre->id == $aprendiz->tipo_sangre )
@@ -111,9 +112,10 @@
     </div>
 </div>
 <div class="form-group row">
-    <label for="example-text-input" class="col-sm-2 col-form-label">Nivel Sisben</label>
+    <label for="example-text-input" class="col-sm-2 col-form-label">Nivel Sisben <span style="color: orange">*</span></label>
     <div class="col-sm-10">
         <select name="nivel_sisben" id="nivel_sisben" class="form-control">
+            <option value="" disabled selected>Seleccione nivel Sisben....</option>
             @foreach ($sisben as $item)
                 @if ( isset($aprendiz->nivel_sisben) )
                     @if ($item->id == $aprendiz->nivel_sisben)

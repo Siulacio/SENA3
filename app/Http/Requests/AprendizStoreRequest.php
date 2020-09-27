@@ -31,6 +31,8 @@ class AprendizStoreRequest extends FormRequest
             'fecha_nac'=>'required',
             'direccion'=>'required',
             'telefono'=>'required',
+            'tipo_sangre'=>'required',
+            'nivel_sisben'=>'required',
         ];
     }
 
@@ -46,6 +48,8 @@ class AprendizStoreRequest extends FormRequest
             'fecha_nac.required'=>'fecha requerida',
             'direccion.required'=>'dirección requerido',
             'telefono.required'=>'telefono requerido',
+            'tipo_sangre.required'=>'Tipo sangre requerido',
+            'nivel_sisben.required'=>'Nivel sisben requerido',
         ];
     }
 }

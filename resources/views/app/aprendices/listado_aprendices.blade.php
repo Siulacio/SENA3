@@ -78,9 +78,9 @@
                                     <td>                                        
                                         <a href="{{url('/aprendices/editar/'.$aprendiz->id)}}" ><i class="fas fa-edit" title="Editar Aprendiz"></i></a>
                                         @if ($aprendiz->estado == 1)
-                                            <a href="{{url('/aprendices/estado/'.$aprendiz->id)}}" class="ml-2" ><i class="far fa-thumbs-up" title="Inactivar Aprendiz"></i></a>
+                                            <a href="{{url('/aprendices/estado/'.$aprendiz->id)}}" class="ml-2" ><i class="far fa-check-circle" title="Aprendiz activo"></i></a>
                                         @else
-                                            <a href="{{url('/aprendices/estado/'.$aprendiz->id)}}" class="ml-2" ><i class="far fa-thumbs-down" title="Activar Aprendiz"></i></a>                                            
+                                            <a href="{{url('/aprendices/estado/'.$aprendiz->id)}}" class="ml-2" ><i class="far fa-times-circle" title="Aprendiz inactivo"></i></a>                                            
                                         @endif                                        
                                     </td>                               
 

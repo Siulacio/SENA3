@@ -30,6 +30,7 @@
                                 <td>Nombres</td>
                                 <td>Rol</td>
                                 <td>Email</td>
+                                <td>Estado</td>
                                 <td>Acciones</td>
                             </tr>
                         </thead>
@@ -41,11 +42,18 @@
                                     <td>{{$usuario->roles->nombre}}</td>
                                     <td>{{$usuario->email}}</td>
                                     <td>
+                                        @if ($usuario->estado == 1)
+                                            Activo
+                                        @else
+                                            Inactivo
+                                        @endif
+                                    </td>
+                                    <td>
                                         <a href="{{url('/usuarios/editar/'.$usuario->id)}}" ><i class="fas fa-edit" title="Editar Usuario"></i></a>
                                         @if ($usuario->estado == 1)
-                                            <a href="{{url('/usuarios/estado/'.$usuario->id)}}" class="ml-2" ><i class="far fa-thumbs-up" title="Inactivar Usuario"></i></a>
+                                            <a href="{{url('/usuarios/estado/'.$usuario->id)}}" class="ml-2"><i class="far fa-check-circle" title="Usuario activo"></i></a>
                                         @else
-                                            <a href="{{url('/usuarios/estado/'.$usuario->id)}}" class="ml-2" ><i class="far fa-thumbs-down" title="Activar Usuario"></i></a>                                            
+                                            <a href="{{url('/usuarios/estado/'.$usuario->id)}}" class="ml-2"><i class="far fa-times-circle" title="Usuario inactivo"></i></a>                                            
                                         @endif
                                     </td>
                                 </tr>                                

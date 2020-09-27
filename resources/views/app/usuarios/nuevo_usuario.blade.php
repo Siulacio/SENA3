@@ -28,6 +28,9 @@
                         @csrf
                         @include('app.usuarios.formulario_usuarios')
                         <hr>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label"> <span style="color: orange">*</span> Campos requeridos </label>
+                        </div>
                         <div class="form-group row mr-3 align-center">
                         <hr>
                             <button type="submit" class="btn btn-primary">Guardar</button>

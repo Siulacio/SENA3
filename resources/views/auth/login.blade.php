@@ -32,11 +32,12 @@
 
                     <h3 class="text-center mt-0">
                         {{-- <a href="index.html" class="logo logo-admin"><img src="{{asset('dashor/assets/images/logo.png')}}" height="20" alt="logo"></a> --}}
-                        <img src="{{asset('img/logos/logo.png')}}" alt="" class="rounded-circle  mx-auto d-block w-80">
+                        {{-- <img src="{{asset('img/logos/logo.png')}}" alt="" class="rounded-circle  mx-auto d-block w-80"> --}}
+                        <img src="{{asset('img/logos/SENAAPN.png')}}" alt="">
 
                     </h3>
 
-                    <h6 class="text-center">Ingreso</h6>
+                    {{-- <h6 class="text-center">Ingreso</h6> --}}
 
                     <div class="p-3">
                         

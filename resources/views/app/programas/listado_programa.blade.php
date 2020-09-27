@@ -61,9 +61,9 @@
                                     <td>                                        
                                         <a href="{{url('/programas/editar/'.$programa->id)}}" ><i class="fas fa-edit" title="Editar Programa"></i></a>
                                         @if ($programa->estado == 1)
-                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-thumbs-up" title="Inactivar Programa"></i></a>
+                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-check-circle" title="Programa activo"></i></a>
                                         @else
-                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-thumbs-down" title="Activar Programa"></i></a>                                            
+                                            <a href="{{url('/programas/estado/'.$programa->id)}}" class="ml-2" ><i class="far fa-times-circle" title="Programa inactivo"></i></a>                                            
                                         @endif                                        
                                     </td>
                                 </tr>   

@@ -25,19 +25,25 @@ class UserStoreRequest extends FormRequest
     {
         return [
             'password'=>'required',
+            'nombres'=>'required',
+            'rol'=>'required',
             'password_confirm'=>'required_with:password|same:password',
-            'username'=>'unique:users,username',
-            'email'=>'unique:users,email',
+            'username'=>'required|unique:users,username',
+            'email'=>'required|unique:users,email',
         ];
     }
 
     public function messages()
     {
         return [
+            'username.required'=>'Campo username requerido',
+            'nombres.required'=>'Campo nombres requerido',
+            'email.required'=>'Campo Email requerido',
             'password.required'=>'Contraseña requerida',
             'password_confirm.same'=>'Las contraseñas no coinciden',
             'username.unique' => 'El usuario ya se encuentra registrado',
             'email.unique' => 'El correo ya se encuentra registrado',
+            'rol.required' => 'Campo rol requerido',
         ];
     }
 }

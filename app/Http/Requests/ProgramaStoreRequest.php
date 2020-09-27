@@ -27,6 +27,7 @@ class ProgramaStoreRequest extends FormRequest
             'codigo'=>'required|numeric',
             'nombre'=>'required',
             'duracion'=>'required|numeric',
+            'fecha_inicio'=>'required',
             'fecha_cierre'=>'after:'.$this->fecha_inicio,
         ];
     }
@@ -39,6 +40,7 @@ class ProgramaStoreRequest extends FormRequest
             'duracion.required' => 'El campo duracion es obligatorio',
             'duracion.numeric' => 'El campo duracion debe ser númerico',
             'fecha_cierre.after' => 'La fecha de cierre debe ser porterior a la de inicio',
+            'fecha_inicio.required'=>'La fecha de inicio es obligatoria',
         ];
     }
 }

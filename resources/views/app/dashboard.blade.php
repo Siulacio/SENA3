@@ -132,8 +132,12 @@
                     <!-- Top Bar Start -->
                     <div class="topbar">
                         <nav class="navbar-custom">
+                            <ul class="list-inline float-left">
+                                <li class="list-inline-item dropdown notification-list ml-3">
+                                    <img class="ml-4" src="{{asset('img/logos/SENAAP.png')}}" height="70" alt="">
+                                </li>                                
+                            </ul>
                             <ul class="list-inline float-right mb-0">
-
                                 {{-- <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
                                        aria-haspopup="false" aria-expanded="false">
@@ -211,7 +215,7 @@
                                 <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light nav-user" data-toggle="dropdown" href="" role="button"
                                         aria-haspopup="false" aria-expanded="false">
-                                        <img src="{{asset('dashor/assets/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">
+                                        <img src="{{asset('img/logos/user.png')}}" alt="user" class="rounded-circle">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                         <!-- item-->
